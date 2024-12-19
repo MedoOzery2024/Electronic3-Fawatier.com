@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الأطيبان A. M. B لتمور الوادي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="page">
+        <div class="logo">
+            <img src="img1.png" alt="Logo of الأطيبان A. M. B">
+        </div>
+        <h1>شركة الأطيبان A. M. B لتمور الوادي</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+    </div>
+
+    <div id="main-page" class="page" style="display: none;">
+        <div class="logo">
+            <img src="img1.png" alt="Logo of الأطيبان A. M. B">
+        </div>
+        <h1>شركة الأطيبان A. M. B لتمور الوادي</h1>
+        <div id="clock"></div>
+        <div id="date"></div>
+        <button id="add-customer-btn">إضافة عميل</button>
+    </div>
+
+    <div id="customer-page" class="page" style="display: none;">
+        <div class="customer-container">
+            <h2>إضافة عميل جديد</h2>
+            <form id="customer-form">
+                <div class="form-group">
+                    <label for="customer-id">رقم العميل:</label>
+                    <input type="text" id="customer-id" name="customer-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-name">اسم العميل:</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">رقم الهاتف:</label>
+                    <input type="text" id="customer-phone" name="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">عنوان العميل:</label>
+                    <input type="text" id="customer-address" name="customer-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-type">نوع العميل:</label>
+                    <select id="customer-type" name="customer-type" required>
+                        <option value="ذكر">ذكر</option>
+                        <option value="انثى">انثى</option>
+                    </select>
+                </div>
+                <button type="submit">إضافة</button>
+            </form>
+            <table id="customer-table">
+                <thead>
+                    <tr>
+                        <th>رقم العميل</th>
+                        <th>اسم العميل</th>
+                        <th>رقم الهاتف</th>
+                        <th>عنوان العميل</th>
+                        <th>نوع العميل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Customer data will be inserted here -->
+                </tbody>
+            </table>
+            <div class="button-group">
+                <button id="save-customers-btn">حفظ البيانات</button>
+                <button id="delete-customers-btn">حذف البيانات نهائيا</button>
+                <button id="restore-customers-btn">استعادة البيانات</button>
+                <button id="print-customers-btn">طباعة</button>
+                <button id="back-btn">العودة إلى الصفحة الرئيسية</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
